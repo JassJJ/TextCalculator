@@ -43,7 +43,7 @@ public class TestCalculator {
 
   }
   @Test
-  public void Charcounter(){
+  public void CharCounter(){
     TextCalculator calc = new TextCalculator();
     calc.setRow("hej jag heter jasmijn");
     calc.getChar();
@@ -51,7 +51,25 @@ public class TestCalculator {
     int actual= calc.getChar();
     assertEquals(expected,actual);
 
+  }
+  @Test
+  public void wordCounter(){
+  TextCalculator calc = new TextCalculator();
+  calc.setRow("hej jag heter Jamsijn");
+  calc.getWords();
+    int expected = 4;
+    int actual= calc.getWords();
+    assertEquals(expected,actual);
 
+  }
+  @Test
+  public void GetLongestWord(){ //måste fixa, lägger till extra mellan rum på slutet
+    TextCalculator calc = new TextCalculator();
+    calc.setRow("hej jag heter Jasmijn");
+    String expected = "Jasmijn";
+    calc.getWords();
+    String actual = calc.GetLongestWord();
+    assertEquals(expected,actual);
   }
 
 

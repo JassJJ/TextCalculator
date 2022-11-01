@@ -1,12 +1,13 @@
 package Project;
 
-import java.sql.SQLOutput;
+
 import java.util.Scanner;
 
 public class TextReader {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("skriv in din text rad för rad om du vill sluta skriva skriv bara in \"stop\".");
+        System.out.println("skriv in din text rad för rad om du vill sluta skriva skriv bara in \"stop\". " +
+                "\nnär du är klar skickar vi dig info om din text. ^_^");
         TextCalculator A = new TextCalculator();
 
         while (true){
@@ -16,14 +17,19 @@ public class TextReader {
             }
             else {
                 A.setRow(scan.nextLine());
+
             }
 
 
         }
-        System.out.println("outside loop");
-        System.out.println("antal rader är: "+A.getNumRows());
-        System.out.println("antal tecken är: "+A.getChar());
-        System.out.println(A.getRow());
+        System.out.println("Din text har följande:");
+        System.out.println("antal rader: "+A.getNumRows());
+        System.out.println("antal tecken: "+A.getChar());
+        System.out.println("antalet ord: "+ A.getWords());
+        System.out.println("längsta ordet: "+A.GetLongestWord());
+
+
+
 
 
     }
