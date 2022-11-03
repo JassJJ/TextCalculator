@@ -17,8 +17,8 @@ public class TextReader {
             } else {
                 A.setRow(scan.nextLine());
             }
-
         }
+
         System.out.println("Din text har följande:" +
                 "\nantal rader: "+A.getNumRows()+
                 "\nantal tecken: "+A.getChar()+
