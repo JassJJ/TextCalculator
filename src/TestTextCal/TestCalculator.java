@@ -3,8 +3,6 @@ package TestTextCal;
 import Project.TextCalculator;
 import org.junit.jupiter.api.Test;
 
-import java.util.Scanner;
-
 import static org.junit.Assert.assertEquals;
 public class TestCalculator {
   @Test
@@ -24,15 +22,6 @@ public class TestCalculator {
 
     int actual = calc.getNumRows();
     assertEquals(expected, actual);
-  }
-
-  @Test
-  public void saveRowText(){
-    TextCalculator calc = new TextCalculator();
-    calc.setRow("hej jag heter Jasmijn");
-    String expected = "hej jag heter Jasmijn";
-    String actual = calc.getRow();
-    assertEquals(expected,actual);
   }
   @Test void checkStopTrue(){
     TextCalculator calc = new TextCalculator();
