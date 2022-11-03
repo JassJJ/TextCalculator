@@ -52,7 +52,7 @@ public class TestCalculator {
 
   }
   @Test
-  public void GetLongestWord(){ //måste fixa, lägger till extra mellan rum på slutet
+  public void GetLongestWord(){
     TextCalculator calc = new TextCalculator();
     calc.setRow("hej jag heter Jasmijn");
     String expected = "Jasmijn";
