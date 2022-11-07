@@ -49,10 +49,14 @@ public class TextCalculator {// logik klassen
         }
     }
     public String GetLongestWord() {
-        for (String word : words) { // för varje ord i array av ord
-            if (word.length() > longestWord.length()) {//för varje bokstav i ordet i arrayn
-                // jämförs den med de longetWord som hela tiden fulls in i ordning av de längsta ordet tills det inte finns ett ord i arrayn som är längre än det och returer då den
-                longestWord = word;
+        if (words==null) {
+            longestWord = ""; // i fall man inte skriver något alls och bara stop
+        } else {
+            for (String word : words) { // för varje ord i array av ord
+                if (word.length() > longestWord.length()) {//för varje bokstav i ordet i arrayn
+                    // jämförs den med de longetWord som hela tiden fulls in i ordning av de längsta ordet tills det inte finns ett ord i arrayn som är längre än det och returer då den
+                    longestWord = word;
+                }
             }
         }
         return longestWord;
